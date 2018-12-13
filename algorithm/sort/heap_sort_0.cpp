@@ -9,15 +9,12 @@ void HeapAdjust(SqList *L, int s, int m) {
     if(j < m && L->r[j] < L->r[j + 1]) {
       j++;
     }
-
     if(temp >= L->r[j]) {
       break;
     }
-
     L->r[s] = L->r[j];
     s = j; 
   }
-
   L->r[s] = temp;
 }
 
